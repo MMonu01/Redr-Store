@@ -1,0 +1,53 @@
+{
+  "user": [
+    {
+      "name": "md monu",
+      "username": "mdmonu",
+      "email": "mdmonu2021@gmail.com",
+      "mobile": "9315238455",
+      "password": "onetwothree",
+      "id": 1
+    },
+    {
+      "name": "md monu",
+      "username": "mdmonu",
+      "email": "mdmonu2021@gmail.com",
+      "mobile": "9315238455",
+      "password": "onetwothree",
+      "id": 2
+    },
+    {
+      "name": "jsjs",
+      "username": "fs",
+      "email": "js@Josj",
+      "mobile": "2452",
+      "password": "sfs",
+      "id": 3
+    },
+    {
+      "name": "jsjs",
+      "username": "fs",
+      "email": "js@Josj",
+      "mobile": "2452",
+      "password": "sfs",
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
