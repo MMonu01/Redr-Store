@@ -49,7 +49,7 @@ try{
 for(let i=0; i<res.length; i++){
   if(res[i].email===formData.email && res[i].password===formData.password){
    x = true
- loginUser(null)
+ loginUser(res[i])
   }
 }
 if(x===false){
@@ -135,7 +135,7 @@ console.log(authState)
       </InputRightElement>
     </InputGroup>
 {/* ------------------------------- */}
-                <Input type="submit" bg="red" color="white" style={{marginTop:"30px"}} value="Login"/>
+                <Input type="submit" bg="red" color="white" style={{marginTop:"30px",cursor:"pointer"}} value="Login"/>
 
 
         </Stack>

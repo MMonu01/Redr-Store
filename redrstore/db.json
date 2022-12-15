@@ -2,52 +2,513 @@
   "user": [
     {
       "name": "md monu",
-      "username": "mdmonu",
+      "username": "monu",
       "email": "mdmonu2021@gmail.com",
       "mobile": "9315238455",
       "password": "onetwothree",
       "id": 1
     },
     {
-      "name": "md monu",
-      "username": "mdmonu",
-      "email": "mdmonu2021@gmail.com",
-      "mobile": "9315238455",
-      "password": "onetwothree",
+      "name": "",
+      "username": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
       "id": 2
-    },
-    {
-      "name": "jsjs",
-      "username": "fs",
-      "email": "js@Josj",
-      "mobile": "2452",
-      "password": "sfs",
-      "id": 3
-    },
-    {
-      "name": "jsjs",
-      "username": "fs",
-      "email": "js@Josj",
-      "mobile": "2452",
-      "password": "sfs",
-      "id": 4
     }
   ],
-  "posts": [
+  "admin": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "monu",
+      "full_name": "Md Monu",
+      "mobile": "9315238455",
+      "email": "mdmonu2021@gmail.com",
+      "password": "redrstore",
+      "customers": [],
+      "orders": [],
+      "products": {
+        "Fresh_Fruits": [
+          {
+            "id": "sc1",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000033_25-fresho-banana-yelakki.jpg",
+            "product_name": "Banana - Yelakki",
+            "quantity": 1,
+            "weight": "500 g",
+            "price": 48,
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.5",
+            "description": "Fresh, tiny small sized, directly procured from the farm, this variety is called Yelakki in Bangalore and Elaichi in Mumbai. Despite its small size, they are naturally flavoured, aromatic and sweeter compared to regular bananas. Yelakki bananas are around 3- 4 inches long, and contain a thinner skin and better shelf life than Robusta bananas."
+          },
+          {
+            "id": "sc2",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/1222182_1-fresho-orange-nagpur-regular.jpg",
+            "product_name": "Orange - Nagpur, Regular",
+            "quantity": 1,
+            "price": 140,
+            "weight": "2 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.6",
+            "description": "Freshly picked directly from Nagpur farms, Fresho Nagpur oranges are sweet and bursting with juice. These are simple to peel and section. Treat your taste buds with this mouth-watering fruit that is sweet and has a distinctive flavour."
+          },
+          {
+            "id": "sc3",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000025_27-fresho-banana-robusta.jpg",
+            "product_name": "Banana - Robusta",
+            "quantity": 1,
+            "price": 493,
+            "discount": 10,
+            "weight": "1 kg",
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste. The stalks of Robustas are thick and rigid. Fresh fruits are green, which revolve to a bright yellow on ripening and the flesh contains a white - ceramic colour. Fresho Robusta is fine quality, sweet flavoured, mushy and soft bananas."
+          },
+          {
+            "id": "sc4",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40033819_29-fresho-apple-shimla.jpg",
+            "product_name": "Apple - Shimla",
+            "quantity": 1,
+            "price": 166,
+            "weight": "4 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Considered as most commonly grown apples in India, Shimla apples have a light red skin, juicy and crunchy flesh. We source the best apples with residue and wax free peel from the trusted growers."
+          },
+          {
+            "id": "sc5",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/1221868_1-fresho-tender-coconut.jpg",
+            "product_name": "Tender Coconut",
+            "quantity": 1,
+            "price": 150,
+            "weight": "5 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "TYoung, fresh and healthy tender coconuts are a pure, tasty and nutritious energy drink that keeps body hydrated round the clock. Tender coconut is the most refreshing drink and best to quench your thirst in the summer. Tender coconut has antioxidant properties which help to protect the body from free radicals. It helps to lower blood pressure level, prevent kidney stone, and support heart health."
+          },
+          {
+            "id": "sc6",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000269_31-fresho-pomegranate.jpg",
+            "product_name": "Pomegranate (Loose)",
+            "quantity": 1,
+            "price": 155,
+            "weight": "4 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "3.5",
+            "description": "With ruby color and an intense floral, sweet-tart flavor, the pomegranate delivers both taste and beauty. You can remove the skin and the membranes to get at the delicious fruit with nutty seeds. Fresho Pomegranates are finely sorted and graded to deliver the best tasting pomegranates to you."
+          },
+          {
+            "id": "sc7",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/30009286_7-fresho-blueberry.jpg",
+            "product_name": "Blueberry",
+            "quantity": 1,
+            "price": 180,
+            "weight": "125 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7",
+            "description": "Plump, smooth-skinned and indigo coloured perfect little globes of juicy berries have mostly sweet and slightly tart flavour. We have imported this fine quality, delicious tasting variety of blueberries."
+          },
+          {
+            "id": "sc8",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000093_16-fresho-coconut-medium.jpg",
+            "product_name": "Coconut - Medium",
+            "quantity": 1,
+            "price": 23,
+            "weight": "1 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Coconut is a very stable fruit. It is a mature fruit of the cocos nucifera palm. The fruit is nearly spherical to oval in shape and measure between 5-10 inches in width. Its rough external husk is light green, and turns gray as the nut grown-up. The husk is about 1-2 inches in thickness and made of tough fibers. Product image shown is for representation purpose only, the actually product may vary based on season, produce & availability."
+          },
+          {
+            "id": "sc9",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/20003956_2-fresho-baby-orange.jpg",
+            "product_name": "Baby Orange (Loose)",
+            "quantity": 1,
+            "price": 120,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7",
+            "description": "Lovely, bright, reddish, glossy and smooth skinned fruits, these little oranges are a sheer experience. The juiciness and sweetness of the mini oranges are distinctive. These are also simple to peel and section."
+          },
+          {
+            "id": "sc10",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40120006_4-fresho-pomegranate-small.jpg",
+            "product_name": "Pomegranate - Small (Loose)",
+            "quantity": 1,
+            "price": 180,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "With ruby color and an intense floral, sweet-tart flavor, the pomegranate delivers both taste and beauty. You can remove the skin and the membranes to get at the delicious fruit with nutty seeds. Fresho Pomegranates are finely sorted and graded to deliver the best tasting pomegranates to you."
+          },
+          {
+            "id": "sc11",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/20000911_30-fresho-kiwi-green.jpg",
+            "product_name": "Kiwi - Green",
+            "quantity": 1,
+            "price": 100,
+            "weight": "3 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7",
+            "description": "Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with tiny, edible black seeds. With its distinct sweet-sour taste and a pleasant smell, it tastes like strawberry and honeydew melon."
+          },
+          {
+            "id": "sc12",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40023474_7-fresho-banana-yelakki-organically-grown.jpg",
+            "product_name": "Banana - Yelakki, Organically Grown",
+            "quantity": 1,
+            "price": 500,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Fresh, tiny small sized, directly procured from the farm, this variety is called Yelakki in Bangalore and Elaichi in Mumbai. Despite its small size, they are naturally flavoured, aromatic and sweeter compared to regular bananas. Yelakki bananas are around 3- 4 inches long, and contain a thinner skin and better shelf life than Robusta bananas."
+          },
+          {
+            "id": "sc13",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000207_24-fresho-watermelon-small.jpg",
+            "product_name": "Watermelon - Small",
+            "quantity": 1,
+            "price": 60,
+            "weight": "2 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "With greenish black to smooth dark green surface, Fresho watermelons are globular in shape and are freshly picked for you directly from our farmers. The juicy, sweet and grainy textured flesh is filled with 12-14% of sugar content, making it a healthy alternative to sugary carbonated drinks. Flesh colour of these watermelons are pink to red with dark brown/black seeds."
+          },
+          {
+            "id": "sc14",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000013_24-fresho-avocado.jpg",
+            "product_name": "Avocado (Loose)",
+            "quantity": 1,
+            "price": 180,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.8",
+            "description": "Avocados are oval shaped fruits with a thick green and a bumpy, leathery outer skin. They have a unique-texture, with a creamy and light green coloured flesh that has a buttery flavour and special aroma. Avocados are also known as an alligator pear or butter fruit. Fresho avocados delivered to you, will not just entice your taste buds but will also ensure your well being."
+          },
+          {
+            "id": "sc15",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40114961_4-fresho-papaya-small.jpg",
+            "product_name": "Papaya - Small",
+            "quantity": 1,
+            "price": 50,
+            "weight": "1 pc",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "5",
+            "description": "Papayas grow in tropical climates and are also known as papaws or pawpaws. Initially green and somewhat bitter in taste, papayas are butter-yellow when fully ripe and shaped like a pear.    Their pale-orange flesh has dozens of small, black, sticky seeds at the center, similar to a melon."
+          },
+          {
+            "id": "sc16",
+            "adminId": "monu",
+            "image": "hhttps://www.bigbasket.com/media/uploads/p/s/40203347_2-fresho-mosambi-economy.jpg",
+            "product_name": "Mosambi - Economy (Loose)",
+            "quantity": 1,
+            "price": 80,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Fresho Mosambis are of the best quality, handpicked and sourced directly from the farmers of Anantapur. Sweet lime or mosambi is lime-like, large-sized with an underlying yellow base. The intense, refreshing aroma is due to the essential oils present in its skin. It generally tastes sweet, occasionally tart to sweet. Enriched with Vitamin C, protein and fiber, it provides a range of health benefits. You can even make Juice from this fruit."
+          },
+          {
+            "id": "sc17",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40033823_20-fresho-apple-royal-gala-regular.jpg",
+            "product_name": "Apple - Royal Gala, Regular",
+            "quantity": 1,
+            "price": 175,
+            "weight": "4 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7",
+            "description": "A combination of slightly tart tasting skin and honey floral tasting flesh, the Royal Gala apples, as the name suggests looks regal with beautiful golden coloured streaks."
+          },
+          {
+            "id": "sc18",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40174618_4-fresho-pear-beauty.jpg",
+            "product_name": "Pear Beauty",
+            "quantity": 1,
+            "price": 120,
+            "weight": "2 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "Superbly crisp, juicy and sweet with the thinnest skin, South African Pears is like the love child of a big green apple and a Bosc pear - round, bigger than typical pears. It has white interior with a brownish-yellow skin. Its hard and crisp when ripe, not like other pears that must soften to be ripe."
+          },
+          {
+            "id": "sc19",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/30002322_11-fresho-guava-thai.jpg",
+            "product_name": "Guava Premium (Thai)",
+            "quantity": 1,
+            "price": 50,
+            "weight": "1 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7",
+            "description": "Large sized, apple green skinned Thai guavas have a white flesh with pale yellow seeds and tend to be drier than the pink guavas. Thai guavas are only mildly sweet and have very little fragrance."
+          },
+          {
+            "id": "sc20",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/mm/10000588_12-fresho-raw-mango.jpg",
+            "product_name": "Raw Mango (Loose)",
+            "quantity": 1,
+            "price": 90,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2",
+            "description": "aw mango is a sweet-smelling fruit which is liked by al for its tart flavor. The colour varies in shades of greens and the inner flesh is white in colour. Its potent health benefits makes totapuri mango puree concentrate - an important food item. It is very rich in Vitamin C. They also have trace amounts of Vitamin B, K and E. Product image shown is for representation purpose only, the actually product may vary based on season, produce & availability."
+          }
+        ],
+        "Blue_Berry": [
+          {
+            "id": "per4",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/709_1.jpg",
+            "product_name": "Blueberry Lemon Cheese Cookies"
+          },
+          {
+            "id": "per5",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1158_1.jpg",
+            "product_name": "Bagrry's Oats and Quinoa Hot Porridge"
+          },
+          {
+            "id": "per6",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1310_1.jpg",
+            "product_name": "Blueberry Breakfast Shake"
+          },
+          {
+            "id": "per7",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/3769_1_1.jpg",
+            "product_name": "Oats and Fruits"
+          },
+          {
+            "id": "per10",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1232_1.jpg",
+            "product_name": "Summer Fruit Salad"
+          },
+          {
+            "id": "per11",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1241_1.jpg",
+            "product_name": "Kellogg's Special K Berry Surprise"
+          },
+          {
+            "id": "per12",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/2765_1_1.jpg",
+            "product_name": "Blueberry Smoothie Wheat Pancake"
+          },
+          {
+            "id": "per13",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1237_1.jpg",
+            "product_name": "Kellogg's Special K Chocolate Blueberry Spiced Bar"
+          }
+        ],
+        "Best_Sellers": [
+          {
+            "id": "s1",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000072_16-fresho-carrot-orange.jpg",
+            "product_name": "Carrot - Orange (Loose)",
+            "quantity": 1,
+            "weight": "500 g",
+            "price": 25,
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.5"
+          },
+          {
+            "id": "s2",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40208261_1-borges-extra-virgin-olive-oil.jpg",
+            "product_name": "Extra Virgin Olive Oil",
+            "quantity": 1,
+            "price": 3500,
+            "weight": "5 L Per Jar",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.6"
+          },
+          {
+            "id": "s3",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40204988_1-the-laughing-cow-cheese-slices.jpg",
+            "product_name": "Cheese Slices",
+            "quantity": 1,
+            "price": 300,
+            "discount": 10,
+            "weight": "408 g",
+            "total_price": null,
+            "status": null,
+            "rating": "4.2"
+          },
+          {
+            "id": "s4",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000142_16-fresho-ladies-finger.jpg",
+            "product_name": "Ladies' Fingers (Loose)",
+            "quantity": 1,
+            "price": 40,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2"
+          },
+          {
+            "id": "s5",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40089742_2-fresho-beans-haricot.jpg",
+            "product_name": "Beans - Haricot (Loose)",
+            "quantity": 1,
+            "price": 25,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2"
+          },
+          {
+            "id": "s6",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/40030808_10-bb-royal-cuminjeera-whole.jpg",
+            "product_name": "Cumin/Jeera/Jeerige - Whole",
+            "quantity": 1,
+            "price": 400,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "3.5"
+          },
+          {
+            "id": "s7",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+            "product_name": "Cauliflower",
+            "quantity": 1,
+            "price": 20,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7"
+          },
+          {
+            "id": "s8",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/303219_9-borges-durum-wheat-pasta-penne-rigate.jpg",
+            "product_name": "Durum Wheat Pasta - Penne Rigate",
+            "quantity": 1,
+            "price": 150,
+            "weight": "500 g",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2"
+          },
+          {
+            "id": "s9",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000102_17-fresho-cucumber.jpg",
+            "product_name": "Cucumber (Loose)",
+            "quantity": 1,
+            "price": 40,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7"
+          },
+          {
+            "id": "s10",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/10000326_14-fresho-coriander-leaves.jpg",
+            "product_name": "PCoriander Leaves",
+            "quantity": 1,
+            "price": 70,
+            "weight": "1 kg",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.2"
+          },
+          {
+            "id": "s11",
+            "adminId": "monu",
+            "image": "https://www.bigbasket.com/media/uploads/p/s/20000911_30-fresho-kiwi-green.jpg",
+            "product_name": "Kiwi - Green",
+            "quantity": 1,
+            "price": 100,
+            "weight": "3 pcs",
+            "discount": 10,
+            "total_price": null,
+            "status": null,
+            "rating": "4.7"
+          }
+        ]
+      }
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+  "OrderId": {
+    "id": "count",
+    "count": 101
   }
 }
