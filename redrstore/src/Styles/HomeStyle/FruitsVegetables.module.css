@@ -1,0 +1,16 @@
+.Container{margin:50px auto;}
+.child {
+    display:grid; grid-template-columns: repeat(6,auto);  width:90%; margin:10px auto;
+}
+.child img{
+    width:260px
+}
+.child div{margin:4px; border:1px solid rgb(233, 232, 232);}
+.child div:hover {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+.head{text-align:center;font-size:27px;color:rgb(109, 108, 108);}
+.hr{width:90%;margin:auto;}
+@media screen and (min-width:100px) and (max-width: 699px){
+.child{grid-template-columns: repeat(3,auto);}
+.head{font-size: 22px;}
+
+}

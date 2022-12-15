@@ -19,6 +19,7 @@ import React from 'react'
       } from '@chakra-ui/react'
 
 import { ThemeContext } from '../Contexts/ThemeContext'
+import { AuthContext } from '../Contexts/AuthContext'
 import styles from '../Styles/LoginSignup.module.css'
 
 const Signup = ()=>{
@@ -27,7 +28,7 @@ const Signup = ()=>{
     const btnRef = React.useRef()
     const [show, setShow] = React.useState(false)
 const {theme} = React.useContext(ThemeContext)
-
+const {loginUser} = React.useContext(AuthContext)
 const [formData,setFormData] = React.useState({
   name:"",username:"",email:"",mobile:"",password:""
 })
@@ -52,6 +53,7 @@ headers:{
   res = await res.json()
 if(res.name!=undefined){
   console.log("signup Successful")
+  loginUser(res)
 }
 
 }
@@ -70,7 +72,7 @@ console.log(formData)
     
             return (
               <div>
-                <Button ref={btnRef} onClick={onOpen}>
+                <Button ref={btnRef} style={{width:"100%"}} onClick={onOpen}>
                   Signup
                 </Button>
                 <Drawer  bgGradient="radial(gray.300, yellow.400, pink.200)" 

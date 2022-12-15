@@ -1,0 +1,10 @@
+.container{width:90%; margin:0px auto; text-align: justify; border:1px solid rgb(181, 180, 180); padding:20px;}
+.list{width:90%; margin:20px auto; text-align: justify;}
+.head{font-size: 28px; margin:20px auto 20px auto; text-align: left;}
+.Read{border:1px solid rgb(169, 169, 169); background-color: #efefef; padding:3px 10px;}
+.Read:hover {background-color:#ebebeb;}
+.Read:active {background-color: #dfdfdf;}
+
+@media  screen and  (min-width:100px) and (max-width:560px){
+    .head{font-size: 24px;}
+}

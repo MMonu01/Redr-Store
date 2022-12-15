@@ -1,0 +1,15 @@
+.Container{margin:50px auto;}
+.Bank {
+    display:grid; grid-template-columns: repeat(4,auto);  width:90%; margin:10px auto;
+}
+.Bank img{
+    width:260px
+}
+.Bank div{margin:4px; border:1px solid rgb(233, 232, 232);}
+.Bank div:hover {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+.head{text-align:center;font-size:27px;color:rgb(109, 108, 108);}
+.hr{width:90%;margin:auto;}
+@media screen and (min-width:100px) and (max-width: 699px){
+/* .Bank{grid-template-columns: repeat(3,auto);} */
+.head{font-size: 22px;}
+}
