@@ -13,8 +13,8 @@ const AllRoutes = ()=>{
             <Route path="/" element={<Home/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<Signup/>}/>
-            <Route path="/FreshFruits" element={<FreshFruits/>}/>
-            <Route path="/FreshFruits/:id" element={<SingleFruits/>}/>
+            <Route path="/products/freshfruits" element={<FreshFruits/>}/>
+            <Route path="/products/freshfruits/:id" element={<SingleFruits/>}/>
             </Routes>
     )
 }

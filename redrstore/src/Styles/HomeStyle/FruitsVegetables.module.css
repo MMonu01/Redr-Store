@@ -5,7 +5,7 @@
 .child img{
     width:260px
 }
-.child div{margin:4px; border:1px solid rgb(233, 232, 232);}
+.child div{margin:4px; border:1px solid rgb(233, 232, 232); cursor: pointer;}
 .child div:hover {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 .head{text-align:center;font-size:27px;color:rgb(109, 108, 108);}
 .hr{width:90%;margin:auto;}

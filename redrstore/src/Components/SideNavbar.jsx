@@ -1,4 +1,8 @@
 import React from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
+
 import {
     Drawer,
     DrawerBody,
@@ -45,7 +49,7 @@ const SideNavbar = ()=>{
         return (
           <>
             <Box ref={btnRef} onClick={onOpen}>
-            <i className={`${Styles.menu} fa-solid fa-bars`}></i>
+            <FontAwesomeIcon className={Styles.menu} icon={faBars}></FontAwesomeIcon>
             </Box>
             <Drawer 
               isOpen={isOpen}

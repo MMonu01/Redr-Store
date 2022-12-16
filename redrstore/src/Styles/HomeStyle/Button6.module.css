@@ -2,7 +2,8 @@
     display:grid; grid-template-columns: repeat(6,auto);  width:90%; margin:30px auto;
 }
 .button6 img{
-    width:170px
+    width:170px;
+    cursor:pointer
 }
 .button6 div{margin:4px;}
 

@@ -15,7 +15,7 @@ GetData()
    const GetData  = ()=>{
 fetch('http://localhost:3000/admin')
 .then((res)=>res.json())
-.then((res)=>setData(res[0].products.Best_Sellers))
+.then((res)=>setData(res.products[0].Best_Sellers))
 .catch((err)=>console.log(err))
    }
    console.log(data)

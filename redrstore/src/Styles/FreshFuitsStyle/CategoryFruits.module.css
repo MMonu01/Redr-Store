@@ -1,0 +1,92 @@
+.Container{width:90%; margin:auto;display:grid; grid-template-columns: 200px 1fr;  margin-top:10px}
+.Container>div{margin:4%;}
+.headie{font-size: 18px; font-weight:bold; margin-bottom: 5px; margin-top:10px;}
+.subCategory{margin-left:10px;}
+.subCategory li:hover{color: #a3d15b; cursor:pointer}
+.List li{list-style-type: none; color:rgb(145,144,144)}
+.CategorySide hr{width:180px;}
+.CategorySide{width:220px;  border-right:1px solid #e9eef4;}
+.CategorySide input[type="checkbox"]{
+    font-size: 50px; width:15px; height:15px; margin-right:10px;
+    color:rgb(167, 167, 167);
+}
+.CategorySide label{color:rgb(145, 144, 144);}
+.CategorySide label:hover{color:#a3d15b;cursor: pointer;}
+.firstCheckbox{margin-top:15px}
+
+
+.FruitsSide{ height:100px;width:100%}
+.popularity{display:flex; justify-content: space-between; align-items: center;}
+.popularity>div:nth-child(1){font-size: 24px;color:rgb(87, 87, 87);}
+.popularity select{border:1px solid rgb(169, 169, 169); color:rgb(103, 102, 102);}
+
+.truck{color:#a3d15b; font-size: 20px; margin-right:10px;}
+.allproducts{font-size: 14px; margin-top:20px; display: flex; align-items: center; margin-bottom:10px; color:rgb(130, 130, 130);font-weight:bold; }
+
+
+
+/* ---------------------- */
+.child {
+    display:grid; grid-template-columns: repeat(4,1fr); 
+}
+.child img{
+    width:100%;
+}
+.child>div{margin:4px; border:1px solid rgb(242, 241, 241);}
+.child>div:hover {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+.head{text-align:center;font-size:27px;color:rgb(109, 108, 108);}
+.hr{width:90%;margin:auto;}
+
+.weightprice{
+    border:1px solid rgb(139, 139, 139); margin-top:10px;
+    padding:0 0 0 7px;
+}
+.details{padding:10px}
+
+.strikeContainer {display: flex; align-items: center;margin-top: 8px;}
+.mrp{color:rgb(116, 116, 116); font-size: 12px; margin-right: 5px;}
+.strike {text-decoration: line-through; font-size: 12px; color:rgb(116, 116, 116);margin-right: 15px;}
+
+.tomorrow{display:flex;}
+.truck{font-size: 20px; margin-right: 7px;}
+.truck:hover {color:red}
+.Delivery{font-size: 10px; color:rgb(71, 71, 71);}
+.time{font-size: 11px; color:rgb(71, 71, 71);text-align: center; margin-top: -2px;}
+
+.qsb{display:flex; margin-top:5px}
+.qty{background-color: rgb(240, 240, 240);padding:0 3px;}
+.input{width:30px; outline:none; border: 1px solid rgb(234, 234, 234);padding:0 4px;}
+
+.basket{background-color: #FADD7B; padding:0 5px; border-radius: 4px; margin-left:20px;}
+
+
+@media screen and (min-width:800px) and (max-width:1000px){
+    .Container{grid-template-columns: 1fr;}
+    .CategorySide{display: none;}
+}
+
+@media screen and (min-width:600px) and (max-width:799px){
+    .Container{grid-template-columns: 1fr;}
+    .CategorySide{display: none;}
+    .child{grid-template-columns: repeat(3,1fr);}
+    .popularity>div:nth-child(1){font-size: 22px;}
+
+}
+
+@media screen and (min-width:400px) and (max-width:599px){
+    .Container{grid-template-columns: 1fr;}
+    .CategorySide{display: none;}
+    .child{grid-template-columns: repeat(2,1fr);}
+    .popularity>div:nth-child(1){font-size: 19px;}
+    .popularity select {width:170px; margin-left:5px;}
+
+}
+
+@media screen and (min-width:100px) and (max-width:399px){
+    .Container{grid-template-columns: 1fr; grid-template-columns: 20;}
+    .CategorySide{display: none;}
+    .child{grid-template-columns: repeat(1,1fr);}
+    .popularity>div:nth-child(1){font-size: 17px;}
+    .popularity select {width:130px; margin-left:5px;}
+
+}

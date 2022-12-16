@@ -1,14 +1,16 @@
-import {NavLink} from 'react-router-dom'
+import {NavLink,Link} from 'react-router-dom'
 import React from 'react'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import { ThemeContext } from '../Contexts/ThemeContext'
 import Styles from '../Styles/Navbar.module.css'
-import {Link} from 'react-router-dom'
 
 import { Input,InputGroup,InputRightElement,Button } from '@chakra-ui/react'
 import { AuthContext } from '../Contexts/AuthContext'
 import SideNavbar from './SideNavbar'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faMagnifyingGlass, faCircleUser} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ()=>{
 const {theme,toggleTheme} = React.useContext(ThemeContext)
@@ -26,15 +28,16 @@ const {authState,loginUser,logoutUser} = React.useContext(AuthContext)
      <div>{<SideNavbar/>}</div>
   <div className={Styles.SearchContainer}>
   <input  type='search' className={Styles.Search}  placeholder="Search for Products"/>
-  <div>
+  <div style={{display:"flex",alignItems:"center"}}>
 
-  <i style={{padding:"12px",color:"white",fontSize:"17px",marginTop:"-1px",backgroundColor:"red"}}  className="fa-solid fa-magnifying-glass"></i>
+  {/* <i className="fa-solid fa-magnifying-glass"></i> */}
+  <FontAwesomeIcon icon={faMagnifyingGlass} style={{padding:"12px 12px 14px 12px",cursor:"pointer",color:"white",fontSize:"17px",backgroundColor:"red"}}  ></FontAwesomeIcon>
   </div>
   </div>
     </div>
  
     <div className={Styles.logsin}>
- <div><i className="fa-solid fa-circle-user"></i></div>
+ <div> <FontAwesomeIcon icon={faCircleUser}></FontAwesomeIcon></div>
         
         <div>{authState.isAuth===true?(authState.token.name):(<Signup/>)}</div>
         <div>{authState.isAuth===true?(<Button onClick={logoutUser}>Logout</Button>):(<Login/>)}</div>
