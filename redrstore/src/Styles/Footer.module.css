@@ -2,16 +2,16 @@
 .top{display:grid; grid-template-columns: repeat(4,1fr); color:rgb(126, 126, 126); width:85%; margin:auto; margin-top:50px; margin-bottom:50px}
 .top>div{display:flex; flex-direction:column;gap:12px; }
 .Social{display:flex; justify-content: space-between;}
-.Social i{font-size: 40px;}
-.facebook{background-color: white;color:#3b5998; padding:5px;}
+/* .Social FontAwesomeIcons{} */
+.facebook{background-color: white;color:#3b5998; padding:5px;font-size: 40px;}
 .facebook:hover {background-color: #3b5998;color:white;border-radius: 100%;}
-.pinterest{background-color: white;color:#db3236; padding:5px;}
+.pinterest{background-color: white;color:#db3236; padding:5px;font-size: 40px;}
 .pinterest:hover{background-color: #db3236;color:white;border-radius: 100%;}
 
-.twitter{background-color: white;color:hsl(196,100%,46%); padding:5px;}
+.twitter{background-color: white;color:hsl(196,100%,46%); padding:5px;font-size: 40px;}
 .twitter:hover{background-color: hsl(196,100%,46%);color:white;border-radius: 100%; padding:10px; font-size:30px}
 
-.instagram{background-color: white;color:#7c95ac; padding:5px;}
+.instagram{background-color: white;color:#7c95ac; padding:5px;font-size: 40px;}
 .instagram:hover{background-color: #7c95ac;color:white;border-radius: 50%; padding:10px; font-size:30px}
 
 .color{color:#74d23d}

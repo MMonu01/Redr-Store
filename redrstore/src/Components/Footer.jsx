@@ -1,5 +1,7 @@
 import React from 'react'
 import Style from '../Styles/Footer.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFacebook, faPinterest,faTwitter,faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 let arr = [
     'https://assets.pharmeasy.in/web-assets/dist/d058b00d.svg',
@@ -54,10 +56,10 @@ const Footer = ()=>{
                 <div>
                     <div className={Style.head}>Get Social With Us</div>
                     <div className={Style.Social}>
-                <div><i className={`${Style.facebook} fa-brands fa-facebook`} ></i></div>
-                <div><i className= {`${Style.pinterest} fa-brands fa-pinterest`}></i></div>
-                <div><i className= {`${Style.twitter} fa-brands fa-twitter`}></i></div>
-                <div><i className= {`${Style.instagram} fa-brands fa-instagram`}></i></div>
+                <div><FontAwesomeIcon icon={faFacebook} className={Style.facebook}></FontAwesomeIcon></div>
+                <div><FontAwesomeIcon icon={faPinterest} className={Style.pinterest}></FontAwesomeIcon></div>
+                <div><FontAwesomeIcon icon={faTwitter} className={Style.twitter}></FontAwesomeIcon></div>
+                <div><FontAwesomeIcon icon={faInstagram} className={Style.instagram}></FontAwesomeIcon></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,8 @@
 import React from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+
     import {
         Drawer,
         DrawerBody,
@@ -114,7 +118,7 @@ console.log(formData)
             />
           <InputRightElement width='4.5rem'>
             <Button h='1.75rem' size='sm' onClick={handleClick}>
-            {show ? (<i style={{fontSize:"20px"}} className="fa-solid fa-eye-slash"></i>) : (<i style={{fontSize:"20px"}} className="fa-solid fa-eye"></i>)}
+            {show ? (<FontAwesomeIcon style={{fontSize:"20px"}} icon={faEyeSlash}></FontAwesomeIcon>) : (<FontAwesomeIcon style={{fontSize:"20px"}} icon={faEye}></FontAwesomeIcon>)}
             </Button>
           </InputRightElement>
         </InputGroup>
