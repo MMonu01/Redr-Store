@@ -11,6 +11,7 @@ import { LinkOverlay } from '@chakra-ui/react'
 const FreshFruits = ()=>{
     return(
         <>
+    <div style={{height:"71px",width:"100px"}}></div>
        
      <Shortnav/>
 

@@ -1,4 +1,10 @@
-.Container {background: white; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; display:grid; grid-template-columns: 20% 50% 20%; justify-content: space-around; align-items: center;}
+.Container {background: white;  display:grid; grid-template-columns: 20% 46% 4% 20%; justify-content: space-around; align-items: center; border-bottom:1px solid rgb(237, 237, 237);
+ width:100%;}
+/* .Container.fixed.shadow-after-3:before{
+    border:1px solid red
+} */
+.basket{display:flex; align-items: center;}
+
 
 .logsin { display:flex;align-items: center; justify-content: center;}
 .logsin>div {margin:5px;}
@@ -8,15 +14,16 @@
 /* .fa-magnifying-glass{padding:105px; background-color: red; color:red} */
 .menu {font-size: 25px; color:rgb(71, 71, 71);cursor:pointer; display:none; float: right; position:absolute; right:20px; top:21px;}
 
-@media screen and (min-width:600px) and (max-width:850px){
+@media screen and (min-width:700px) and (max-width:850px){
     .Container{
-        grid-template-columns: 23% 40% 27%;
+        grid-template-columns: 23% 36% 30px 27%;
     }
     
 }
 
-@media screen and (min-width:500px) and (max-width:699px){
-    /* .Container{grid-template-columns: 50% 0% 50%;} */
+@media screen and (min-width:500px) and (max-width:700px){
+    .Container{grid-template-columns: 23% 50% 30px 30px;}
+    
     /* .SearchContainer{display:none;} */
     .logsin{display:none;}
     .menu{display:block}
@@ -25,7 +32,9 @@
 
 
 @media screen and (min-width:100px) and (max-width:499px){
-    /* .Container{grid-template-columns: 50% 0% 50%;} */
+    .Container{grid-template-columns:1fr 1fr 1fr}
+    /* .basket{width:30px;margin-right:80px} */
+
     .SearchContainer{display:none;}
     .logsin{display:none;}
     .menu{display:block}

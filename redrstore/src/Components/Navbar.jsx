@@ -10,14 +10,24 @@ import { AuthContext } from '../Contexts/AuthContext'
 import SideNavbar from './SideNavbar'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faMagnifyingGlass, faCircleUser} from '@fortawesome/free-solid-svg-icons'
+import {faMagnifyingGlass, faCircleUser,faBasketShopping} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ()=>{
 const {theme,toggleTheme} = React.useContext(ThemeContext)
-console.log(theme)
-const {authState,loginUser,logoutUser} = React.useContext(AuthContext)
+const {authState,loginUser,logoutUser,userCart} = React.useContext(AuthContext)
+const [itemCount ,setItemCount]  = React.useState(0)
+React.useEffect(()=>{
+    
+    let count = 0
+    for(let i=0; i<userCart.cart.length; i++){
+        count += Number(userCart.cart[i].quantity)
+    }
+    console.log(count)
+    setItemCount(count)
+},[userCart.cart])
+
     return(
-        <div className={Styles.Container}>
+        <div className={Styles.Container} style={{position:"fixed"}}>
     <div>
         <Link to="/">
 
@@ -36,9 +46,10 @@ const {authState,loginUser,logoutUser} = React.useContext(AuthContext)
   </div>
     </div>
  
+        <div className={Styles.basket}><FontAwesomeIcon icon={faBasketShopping}  style={{fontSize:"20px"}}></FontAwesomeIcon><sup>{itemCount}</sup></div>
     <div className={Styles.logsin}>
  <div> <FontAwesomeIcon icon={faCircleUser}></FontAwesomeIcon></div>
-        
+
         <div>{authState.isAuth===true?(authState.token.name):(<Signup/>)}</div>
         <div>{authState.isAuth===true?(<Button onClick={logoutUser}>Logout</Button>):(<Login/>)}</div>
     </div>
@@ -61,6 +72,5 @@ export default Navbar
   </InputGroup> */}
 
      {/* <div className={Styles.Container}> */}
-    {/* <div>Basket <i className="fa-solid fa-basket-shopping" style={{fontSize:"40px"}}></i></div> */}
 
     {/* <div><button style={{backgroundColor:theme==="Light"?"white":"black",color:theme==="Light"?"black":"white"}} onClick={toggleTheme}>{theme==="light"?"Dark Mode":"Light Mode"}</button></div> */}

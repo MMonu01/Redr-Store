@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 
@@ -34,7 +35,7 @@ const Signup = ()=>{
 const {theme} = React.useContext(ThemeContext)
 const {loginUser} = React.useContext(AuthContext)
 const [formData,setFormData] = React.useState({
-  name:"",username:"",email:"",mobile:"",password:""
+  name:"",username:"",email:"",mobile:"",password:"",order:[]
 })
 
 
@@ -72,7 +73,7 @@ console.log("NODAjjdss")
   const HandleFormData = (e)=>{
 setFormData({...formData,[e.target.name]:e.target.value})
   }
-console.log(formData)
+// console.log(formData)
     
             return (
               <div>

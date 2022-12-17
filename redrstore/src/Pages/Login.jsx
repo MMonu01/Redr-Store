@@ -71,7 +71,7 @@ catch(err){
 console.log(err)
 }
       }
-console.log(authState)
+// console.log(authState)
 
 
       const HandleFormData = (e)=>{
