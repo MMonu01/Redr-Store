@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import Style from '../../Styles/FreshFuitsStyle/CategoryFruits.module.css'
 import { Input,InputGroup,InputRightAddon } from '@chakra-ui/react'
 import {Search2Icon} from '@chakra-ui/icons'
@@ -32,7 +33,7 @@ const [sort,setSort] = React.useState({
 const HandleSelect  = (e)=>{
     setSelect(e.target.value)
 }
-console.log(sort)
+// console.log(sort)
 
     React.useEffect(()=>{
  InGetData()
@@ -77,7 +78,7 @@ GetData(sort)
   
 
 
-console.log(data)
+// console.log(data)
 
     const HandleSearch = ()=>{
         console.log("this is a search engine")
@@ -369,7 +370,7 @@ Fresh Fruits (154)</div>
 <div className={Style.child}>
     {loading===true?("Loading...!"):(data.map((el)=>(
             <div key={el.id}>
-<div key={el.image}><img src={el.image} alt={el.image}/>
+<div key={el.image}><Link to={`/products/freshfruits/${el.id}` } ><img src={el.image} alt={el.image}/></Link>
 <div className={Style.details}>
 <div style={{fontSize:"12px",color:"rgb(211, 211, 211)"}}>Fresho</div>
 <p>{el.product_name}</p>

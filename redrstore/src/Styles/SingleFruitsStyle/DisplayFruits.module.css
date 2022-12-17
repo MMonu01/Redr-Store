@@ -1,0 +1,50 @@
+.Container{width:90%; margin:auto;display:grid; grid-template-columns: 200px 1fr 1fr; gap:3%;  margin-top:10px}
+.Container>div{margin:4%;}
+.headie{font-size: 18px; font-weight:bold; margin-bottom: 5px; margin-top:10px;}
+.subCategory{margin-left:10px;}
+li:hover{color: #a3d15b; cursor:pointer}
+ li{list-style-type: none; color:rgb(145,144,144); font-size: 14px;}
+.CategorySide hr{width:180px;}
+.CategorySide{width:220px;  border-right:1px solid #e9eef4;}
+.Fresho{margin-left:20px;}
+
+
+.ImageSide img {width:100%}
+
+.Fresh{font-size: 13px; text-decoration: underline; text-decoration-thickness: .4px;}
+.nameweight{font-size: 18px; color:rgb(70, 70, 70);margin-bottom:10px}
+.mrp{font-size: 12px; color:rgb(134, 134, 134);margin-bottom:-6px;}
+.mrp span{text-decoration: line-through;}
+.price{font-size: 18px; color:black; font-weight:400;margin-bottom:-4px}
+.save{font-size: 11px; font-weight: 600; color:rgb(185, 43, 43)}
+.taxes{font-size: 12px; color:rgb(167, 167, 167);}
+
+.basket{display:flex; gap:7px;}
+.basket input {border:1px solid rgb(165, 165, 165); border-radius: 4px;
+     padding:5px 13px; width:39px; outline:none;}
+
+.Add{background-color: #84c225; border-radius: 4px; color:white;padding:2px 15px;}
+.Add:active{background-color: #80a83f;}
+.SaveItem{border:1px solid rgb(165, 165, 165); border-radius: 4px; padding:0 15px;}
+.SaveItem:active{background-color: rgb(246, 251, 255);}
+.time{font-size: 14px;margin-top:30px; color:rgb(165, 165, 165)}
+.time span{margin-left:15px;}
+.combo{text-align: right; font-size: 12px; margin-top:20px;cursor: pointer;}
+
+@media screen and (min-width:700px) and (max-width:860px){
+.Container{grid-template-columns: 1fr 1fr;}
+.CategorySide{width:auto;}
+}
+
+@media screen and (min-width:550px) and (max-width:700px){
+    .Container{grid-template-columns:1fr 1fr;}
+    /* .Container{display:flex; flex-wrap: wrap;} */
+    .CategorySide{display:none;}
+    
+    }
+
+    @media screen and (min-width:100px) and (max-width:550px){
+        .Container{grid-template-columns: 1fr;}
+        .CategorySide{display: none;}
+        .ImageSide img {width:80%}
+    }
