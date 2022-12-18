@@ -11,7 +11,6 @@ const FruitsVegetables = ()=>{
         'https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/79e284b5-4eb8-4e08-b32f-de87a6dcb369/e5ea2843-187e-41ca-a9ab-17c20bc8d463/hp_exotic-fruits-fnv_Storefront_m_251122_05.jpg',
         'https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/79e284b5-4eb8-4e08-b32f-de87a6dcb369/e5ea2843-187e-41ca-a9ab-17c20bc8d463/hp_herbs-seasonings-fnv_Storefront_m_251122_06.jpg'
     ]
-    // console.log(arr[1])
 
    
     return(

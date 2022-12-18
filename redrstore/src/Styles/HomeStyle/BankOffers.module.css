@@ -9,7 +9,12 @@
 .Bank div:hover {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 .head{text-align:center;font-size:27px;color:rgb(109, 108, 108);}
 .hr{width:90%;margin:auto;}
-@media screen and (min-width:100px) and (max-width: 699px){
-/* .Bank{grid-template-columns: repeat(3,auto);} */
+@media screen and (min-width:600px) and (max-width: 699px){
+    .Bank{grid-template-columns: repeat(3,auto);}
+    .head{font-size: 22px;}
+    }
+
+@media screen and (min-width:100px) and (max-width: 600px){
+.Bank{grid-template-columns: repeat(2,auto);}
 .head{font-size: 22px;}
 }

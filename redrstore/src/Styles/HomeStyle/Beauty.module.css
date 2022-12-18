@@ -22,7 +22,6 @@ border:1px solid rgb(233, 232, 232);
 .hr{width:90%;margin:auto;}
 @media screen and (min-width:100px) and (max-width: 699px){
 .child{grid-template-columns: repeat(1,auto);}
-/* .child>div:nth-child(2)>div{width:100%; } */
 .child>div:nth-child(2){width:100.5%; margin-left:-1px;}
 .head{font-size: 22px;}
 

@@ -1,18 +1,23 @@
 import React from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../../Contexts/AuthContext'
 import Style from '../../Styles/FreshFuitsStyle/CategoryFruits.module.css'
 import { Input,InputGroup,InputRightAddon } from '@chakra-ui/react'
 import {Search2Icon} from '@chakra-ui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTruck,faBasketShopping} from '@fortawesome/free-solid-svg-icons'
 import Online from './Online'
-const GetData = (select)=>{
+import Loader from '../../Pages/Loader'
+
+const GetData = (sort,text)=>{
 return axios({
     baseURL:" http://localhost:3000/Fresh_Fruits",
     params:{
-        _sort:select.sort,
-        _order:select.order
+        _sort:sort.sort,
+        _order:sort.order,
+        q:text
+
     }
 })
 }
@@ -29,15 +34,18 @@ const [sort,setSort] = React.useState({
     order:"desc"
 
 })
+const {text} = React.useContext(AuthContext)
+
+
+
 
 const HandleSelect  = (e)=>{
     setSelect(e.target.value)
 }
-// console.log(sort)
 
     React.useEffect(()=>{
  InGetData()
-    },[select])
+    },[select,text])
  
 
 
@@ -54,9 +62,7 @@ setLoading(true)
               else if(select==="Price - High to Low"){
                setSort({sort:"price",order:"desc"})
               }
-            //   else if(select==="Alphabetical"){
-            //    setSort({sort:"product_name",order:"asc"})
-            //   }
+         
               else if(select==="Rupee Saving - High to Low"){
                setSort({sort:"price",order:"desc"})
               }
@@ -64,8 +70,7 @@ setLoading(true)
                setSort({sort:"price",order:"asc"})
               }
 
-GetData(sort)
-// .then((res)=>res.json())
+GetData(sort,text)
  .then((res)=>{
     setLoading(false)
     setData(res.data)
@@ -78,14 +83,12 @@ GetData(sort)
   
 
 
-// console.log(data)
 
     const HandleSearch = ()=>{
         console.log("this is a search engine")
     }
 
     return (
-        // <div className={Style.full}>
         <div className={Style.Container}>
         <div className={Style.CategorySide}>
 
@@ -368,7 +371,7 @@ Fresh Fruits (154)</div>
 <div className={Style.displayProducts}>
 
 <div className={Style.child}>
-    {loading===true?("Loading...!"):(data.map((el)=>(
+    {loading===true?(<Loader/>):(data.map((el)=>(
             <div key={el.id}>
 <div key={el.image}><Link to={`/products/freshfruits/${el.id}` } ><img src={el.image} alt={el.image}/></Link>
 <div className={Style.details}>
@@ -407,8 +410,7 @@ Fresh Fruits (154)</div>
 
      </div>
 
-    //  <Online/>
-    // </div>
+   
     )
 
 }

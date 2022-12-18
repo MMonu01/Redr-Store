@@ -1,8 +1,6 @@
 .Container {background: white;  display:grid; grid-template-columns: 20% 46% 4% 20%; justify-content: space-around; align-items: center; border-bottom:1px solid rgb(237, 237, 237);
  width:100%;}
-/* .Container.fixed.shadow-after-3:before{
-    border:1px solid red
-} */
+
 .basket{display:flex; align-items: center;}
 
 
@@ -11,12 +9,14 @@
 .SearchContainer{border:1px solid rgb(156, 156, 156);display:flex; align-items: center;margin:0px; width:100%; padding:0px;}
 
 .Search {width:100%; min-width:200px; padding:8px 4px 8px 20px;outline:none;border: none;}
-/* .fa-magnifying-glass{padding:105px; background-color: red; color:red} */
 .menu {font-size: 25px; color:rgb(71, 71, 71);cursor:pointer; display:none; float: right; position:absolute; right:20px; top:21px;}
+.basket>div{display:flex; align-items: center;}
+
+.placed{ color:red; font-size: 20px;font-weight: 600;}
 
 @media screen and (min-width:700px) and (max-width:850px){
     .Container{
-        grid-template-columns: 23% 36% 30px 27%;
+        grid-template-columns: 20% 39% 30px 27%;
     }
     
 }
@@ -24,7 +24,6 @@
 @media screen and (min-width:500px) and (max-width:700px){
     .Container{grid-template-columns: 23% 50% 30px 30px;}
     
-    /* .SearchContainer{display:none;} */
     .logsin{display:none;}
     .menu{display:block}
 
@@ -33,7 +32,6 @@
 
 @media screen and (min-width:100px) and (max-width:499px){
     .Container{grid-template-columns:1fr 1fr 1fr}
-    /* .basket{width:30px;margin-right:80px} */
 
     .SearchContainer{display:none;}
     .logsin{display:none;}

@@ -19,7 +19,7 @@ let arr = [
 const Footer = ()=>{
 
     return(
-        <footer >
+        <footer  >
             <div className={Style.top}>
                 <div className={Style.Redrstore}>
 <div className={Style.head}>REDR STORE</div>

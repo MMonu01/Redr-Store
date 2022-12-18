@@ -14,10 +14,13 @@ import BrandStore from '../Components/HomeComponents/BrandStore'
 import OnlineStore from '../Components/HomeComponents/OnlineStore'
 import Footer from '../Components/Footer'
 const Home = ()=>{
+
+
     return(
         <>
 <main>
     <div style={{height:"71px",width:"100px"}}></div>
+
 <TopCarousel/>
 <Button6/>
 <BankOffers/>

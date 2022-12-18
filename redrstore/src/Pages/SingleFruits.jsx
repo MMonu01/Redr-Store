@@ -4,6 +4,7 @@ import Shortnav from '../Components/SingleFruitsComponents/snav'
 import DisplayFruits from '../Components/SingleFruitsComponents/DisplayFruits'
 import About from '../Components/SingleFruitsComponents/About'
 import Footer from '../Components/Footer'
+import Loader from './Loader'
 
 const SingleFruits = ()=>{
 const [data,setData] = React.useState({})
@@ -17,18 +18,17 @@ fetch(`http://localhost:3000/Fresh_Fruits/${id}`)
 .then((res)=>{
 setLoading(false)
 setData(res)
-// console.log(res,"osjos")
-// console.log(data)
+
 })
 .catch((err)=>{console.log(err)})
 },[])
 
     return(
 <>
-<div style={{height:"71px",width:"100px"}}></div>
+<div style={{height:"71px",width:"100px"}} ></div>
 
 {loading?null:<Shortnav product_name={data.product_name}/>}
-{loading?"Loading...":(<DisplayFruits {...data} />)}
+{loading?(<Loader/>):(<DisplayFruits {...data} />)}
 {loading?null:(<About description={data.description} product_name={data.product_name} />)}
 <Footer/>
 </>

@@ -5,25 +5,49 @@ import Signup from '../Pages/Signup'
 import { ThemeContext } from '../Contexts/ThemeContext'
 import Styles from '../Styles/Navbar.module.css'
 
-import { Input,InputGroup,InputRightElement,Button } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 import { AuthContext } from '../Contexts/AuthContext'
 import SideNavbar from './SideNavbar'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faMagnifyingGlass, faCircleUser,faBasketShopping} from '@fortawesome/free-solid-svg-icons'
-
+import {faMagnifyingGlass, faCircleUser,faBasketShopping,faCheck} from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 const Navbar = ()=>{
 const {theme,toggleTheme} = React.useContext(ThemeContext)
-const {authState,loginUser,logoutUser,userCart} = React.useContext(AuthContext)
+const {authState,loginUser,logoutUser,userCart,text,setText} = React.useContext(AuthContext)
 const [itemCount ,setItemCount]  = React.useState(0)
+const [order,setOrder] = React.useState(false)
+
+const PutData = (data)=>{
+    return axios({
+        method:"post",
+        baseURL:`http://localhost:3000/orders`,
+        data:data,
+headers:{
+"Content-Type":"application/json"
+}
+        
+    })
+}
+
+const HandleOrder = ()=>{
+    setOrder(true)
+    PutData(userCart)
+}
+
+const HandleText = (e)=>{
+    setText(e.target.value)
+}
+
 React.useEffect(()=>{
-    
-    let count = 0
-    for(let i=0; i<userCart.cart.length; i++){
-        count += Number(userCart.cart[i].quantity)
+    if(authState.isAuth){
+
+        let count = 0
+        for(let i=0; i<userCart.cart.length; i++){
+            count += Number(userCart.cart[i].quantity)
+        }
+        setItemCount(count)
     }
-    console.log(count)
-    setItemCount(count)
 },[userCart.cart])
 
     return(
@@ -37,16 +61,17 @@ React.useEffect(()=>{
     <div>
      <div>{<SideNavbar/>}</div>
   <div className={Styles.SearchContainer}>
-  <input  type='search' className={Styles.Search}  placeholder="Search for Products"/>
+  <input  type='search' className={Styles.Search}  value={text} onChange={HandleText}  placeholder="Search for Products"/>
   <div style={{display:"flex",alignItems:"center"}}>
 
-  {/* <i className="fa-solid fa-magnifying-glass"></i> */}
-  <FontAwesomeIcon icon={faMagnifyingGlass} style={{padding:"12px 12px 14px 12px",cursor:"pointer",color:"white",fontSize:"17px",backgroundColor:"red"}}  ></FontAwesomeIcon>
+<Link to="/products/freshfruits" style={{background:"red"}}>
+  <FontAwesomeIcon icon={faMagnifyingGlass}  style={{padding:"14px 12px 12px 12px",cursor:"pointer",color:"white",fontSize:"17px",backgroundColor:"red"}} ></FontAwesomeIcon></Link>
   </div>
   </div>
     </div>
  
-        <div className={Styles.basket}><FontAwesomeIcon icon={faBasketShopping}  style={{fontSize:"20px"}}></FontAwesomeIcon><sup>{itemCount}</sup></div>
+        <div className={Styles.basket}> {order===true?(<FontAwesomeIcon className={Styles.placed} icon={faCheck}></FontAwesomeIcon>):(<div><FontAwesomeIcon onClick={HandleOrder} icon={faBasketShopping}  style={{fontSize:"20px",cursor:"pointer"}}></FontAwesomeIcon><sup>{itemCount}</sup>
+        </div>)} </div>
     <div className={Styles.logsin}>
  <div> <FontAwesomeIcon icon={faCircleUser}></FontAwesomeIcon></div>
 
@@ -63,14 +88,5 @@ React.useEffect(()=>{
 export default Navbar
 
 
-   {/* <InputGroup>
-    <InputRightElement
-      pointerEvents='none'
-      children={<i className="fa-solid fa-magnifying-glass"></i>}
-    />
-    <Input type='tel' className={Styles.Search} htmlSize={50} placeholder='Search for Products..' />
-  </InputGroup> */}
-
-     {/* <div className={Styles.Container}> */}
 
     {/* <div><button style={{backgroundColor:theme==="Light"?"white":"black",color:theme==="Light"?"black":"white"}} onClick={toggleTheme}>{theme==="light"?"Dark Mode":"Light Mode"}</button></div> */}

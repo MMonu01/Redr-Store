@@ -1,7 +1,6 @@
 .Container{margin:50px auto;}
 .child {
     display:grid; grid-template-columns: repeat(5,1fr);   margin:10px auto; display:flex; overflow-x: hidden;
-    /* padding:5px; */
 }
 .child:hover {overflow-x: scroll;}
 .child img{

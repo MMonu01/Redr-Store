@@ -8,7 +8,6 @@ import { AuthContext } from '../../Contexts/AuthContext'
 
 const DisplayFruits = ({adminId,id,image,product_name,quantity,price,discount,total_price,status,rating,description,weight})=>{
     const {userCart,setUserCart} = React.useContext(AuthContext)
-    const [Quantity,setQuantity] = React.useState(quantity)
 const [bag,setBag] = React.useState( {
     "id": id,
     "adminId": adminId,
@@ -19,11 +18,14 @@ const [bag,setBag] = React.useState( {
     "status": "In process"
   })
 
+//   console.log(userCart.cart.length)
   const HandleBag = ()=>{
 
 
 // ----------------------------------------------------
+
 let x = userCart.cart
+// console.log(x)
     let arr = []
     let matid = []
     for(let i=0; i<x.length; i++){
@@ -56,27 +58,13 @@ const HandleQuantity = (val)=>{
   setBag({...bag,quantity:val.target.value,total_price:val.target.value*price})        
 }
 
-// console.log(bag)
-// const PatchUser = ()=>{
-//     fetch(`http://localhost:3000/user/${}/orders`,{
-//         method:"PATCH",
-//         body:JSON.stringify({}),
-//         headers:{
-//             "Content-Type":"application/json"
-//         }
-//     })
-// }
 
 
 
-
-
-
-// console.log(Quantity)
 
     return(
 <>
-    <div className={Style.Container}>
+    <div className={Style.Container}  >
     <div className={Style.CategorySide}>
 
 
@@ -118,11 +106,6 @@ const HandleQuantity = (val)=>{
 </div>
 </div>
 </div>
-
-
-
-
-
 
 
 
