@@ -52,7 +52,7 @@ const [allDetails,setAllDetails]  = React.useState("")
   const InSignUp = async()=>{
 
     try{
-      let res = await fetch(`http://localhost:3000/user`,{
+      let res = await fetch(`https://server-unwieldy-record-8334.onrender.com/user`,{
     method:"POST",
     body:JSON.stringify(formData),
     headers:{
@@ -85,7 +85,7 @@ else{
 
   setAllDetails("True")
   let signupStatus = ''
-  fetch(`http://localhost:3000/user`)
+  fetch(`https://server-unwieldy-record-8334.onrender.com/user`)
   .then((res)=>res.json())
 .then((res)=>{signupStatus = res
   let status = true

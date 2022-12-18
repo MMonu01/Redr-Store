@@ -12,7 +12,7 @@ GetData()
    },[])
 
    const GetData  = ()=>{
-fetch('http://localhost:3000/admin')
+fetch('https://server-unwieldy-record-8334.onrender.com/admin')
 .then((res)=>res.json())
 .then((res)=>setData(res.products[0].Best_Sellers))
 .catch((err)=>console.log(err))

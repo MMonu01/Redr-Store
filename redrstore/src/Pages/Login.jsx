@@ -47,7 +47,7 @@ email:"",password:""
 e.preventDefault()
 
 try{
-  let res = await fetch(`http://localhost:3000/user`)
+  let res = await fetch(`https://server-unwieldy-record-8334.onrender.com/user`)
   res = await res.json()
   let x = false
 for(let i=0; i<res.length; i++){

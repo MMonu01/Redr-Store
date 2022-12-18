@@ -13,7 +13,7 @@ const [loading,setLoading] = React.useState(true)
     
 React.useEffect(()=>{
     setLoading(true)
-fetch(`http://localhost:3000/Fresh_Fruits/${id}`)
+fetch(`https://server-unwieldy-record-8334.onrender.com/Fresh_Fruits/${id}`)
 .then((res)=>res.json())
 .then((res)=>{
 setLoading(false)
