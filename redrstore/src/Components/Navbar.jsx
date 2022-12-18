@@ -21,7 +21,7 @@ const [order,setOrder] = React.useState(false)
 const PutData = (data)=>{
     return axios({
         method:"post",
-        baseURL:`http://localhost:3000/orders`,
+        baseURL:`https://server-unwieldy-record-8334.onrender.com/orders`,
         data:data,
 headers:{
 "Content-Type":"application/json"

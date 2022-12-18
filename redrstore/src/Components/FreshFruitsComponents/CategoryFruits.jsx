@@ -12,7 +12,7 @@ import Loader from '../../Pages/Loader'
 
 const GetData = (sort,text)=>{
 return axios({
-    baseURL:" http://localhost:3000/Fresh_Fruits",
+    baseURL:"https://server-unwieldy-record-8334.onrender.com/Fresh_Fruits",
     params:{
         _sort:sort.sort,
         _order:sort.order,
