@@ -19,7 +19,8 @@ import {faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
         InputRightElement,
         Image,
         Box,
-        Stack
+        Stack,
+        Alert,AlertIcon
         
       } from '@chakra-ui/react'
 
@@ -37,37 +38,80 @@ const {loginUser} = React.useContext(AuthContext)
 const [formData,setFormData] = React.useState({
   name:"",username:"",email:"",mobile:"",password:"",order:[]
 })
+const [alertShow,setAlertShow] = React.useState(null)
 
-
-
+// const [signupStatus,setSignupStatus] = React.useState("")
+const [allDetails,setAllDetails]  = React.useState("")
     const handleClick = () => setShow(!show)
+
+    const HandleAlert = ()=>{
+      setAlertShow("")
+      setAllDetails("")
+    }
+
+  const InSignUp = async()=>{
+
+    try{
+      let res = await fetch(`http://localhost:3000/user`,{
+    method:"POST",
+    body:JSON.stringify(formData),
+    headers:{
+      "Content-Type":"application/json"
+    }
+      })
+    
+      res = await res.json()
+    if(res.name!=undefined){
+      console.log("signup Successful")
+      loginUser(res)
+    }
+    
+    }
+    
+    catch(err){
+    console.log(err)
+    console.log("NODAjjdss")
+    }
+    
+  }  
 
   const HandleSignup = async(e)=>{
 e.preventDefault()
-
-
-try{
-  let res = await fetch(`http://localhost:3000/user`,{
-method:"POST",
-body:JSON.stringify(formData),
-headers:{
-  "Content-Type":"application/json"
+// -------------------------------------------------------
+if(formData.name==""|| formData.username=="" || formData.email == "" || formData.mobile ==""|| formData.password==""){
+setAllDetails("False")
 }
+else{
+
+  setAllDetails("True")
+  let signupStatus = ''
+  fetch(`http://localhost:3000/user`)
+  .then((res)=>res.json())
+.then((res)=>{signupStatus = res
+  let status = true
+  for(let i=0; i<signupStatus.length; i++){
+  if(signupStatus[i].email==formData.email || signupStatus[i].username == formData.username || signupStatus[i].mobile==formData.mobile){
+    status = false
+    break
+  }
+}
+if(status){
+  setAlertShow("False")
+  InSignUp()
+    
+  }else{
+    setAlertShow("True")
+  
+  }
+  setFormData({
+    name:"",username:"",email:"",mobile:"",password:"",order:[]
   })
-
-  res = await res.json()
-if(res.name!=undefined){
-  console.log("signup Successful")
-  loginUser(res)
-}
+})
+.catch((err)=>console.log(err))
 
 }
 
-catch(err){
-console.log(err)
-console.log("NODAjjdss")
-}
-
+// -----------------------------------------------
   }
 
   const HandleFormData = (e)=>{
@@ -89,6 +133,17 @@ setFormData({...formData,[e.target.name]:e.target.value})
                 >
                   <DrawerOverlay />
                   <DrawerContent>
+
+                  {(allDetails==="False"?(<Alert status='warning' style={{position:""}} variant='left-accent'>
+    <AlertIcon />
+    Error: Please fill all the credentials!
+  </Alert>): alertShow==="True"?(<Alert status='error' style={{position:""}} variant='left-accent'>
+    <AlertIcon />
+    Error: User already exists!
+  </Alert>):null)  }
+
+                 
+
                     <DrawerHeader>
                         <Box boxSize="140px">
                     <DrawerCloseButton />
@@ -131,9 +186,11 @@ setFormData({...formData,[e.target.name]:e.target.value})
                       </form>
     
                     </DrawerBody>
-          
-                      {/* <Button variant='outline' mr={3} onClick={onClose}> */}
-                      {/* </Button> */}
+          <DrawerFooter>
+            {alertShow==="True" || allDetails=="False"? <Button colorScheme='red' onClick={HandleAlert} variant='ghost'>Remove Alert</Button>:null}
+         
+          </DrawerFooter>
+                    
                      
                   </DrawerContent>
                 </Drawer>

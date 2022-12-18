@@ -9,207 +9,49 @@
       "id": 1
     },
     {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
+      "name": "Ravi",
+      "username": "Ravi Jave",
+      "email": "ravi@gmail.com",
+      "mobile": "29292992",
+      "password": "123",
+      "order": [],
       "id": 2
     },
     {
-      "name": "Md Monu",
-      "username": "monu",
-      "email": "mdmonu2021@gmail.com",
-      "mobile": "9315238444",
-      "password": "yead  whatever",
+      "name": "",
+      "username": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "order": [],
       "id": 3
     },
     {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
+      "name": "rohan",
+      "username": "rohan",
+      "email": "rohanjljss@ljs",
+      "mobile": "292",
+      "password": "ds",
+      "order": [],
       "id": 4
     },
     {
-      "name": "mdmonu",
-      "username": "jlsjs",
-      "email": "jsljlj2ljsl@ljls",
-      "mobile": "297297292",
-      "password": "sjs",
+      "name": "Revan",
+      "username": "revan",
+      "email": "revan@gmail.com",
+      "mobile": "224",
+      "password": "123",
+      "order": [],
       "id": 5
     },
     {
-      "name": "mdm",
-      "username": "xyz",
-      "email": "xyz@gmail.com",
-      "mobile": "298220820802",
-      "password": "xyz",
-      "id": 6,
-      "work": "Done",
-      "quantity": "1889",
-      "orders": []
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "id": 7
-    },
-    {
-      "name": "All is well",
-      "username": "new hell",
-      "email": "mind@ojsos",
-      "mobile": "242",
-      "password": "josjs",
-      "id": 8
-    },
-    {
-      "name": "javier",
-      "username": "maverick",
-      "email": "sj@jljss",
-      "mobile": "242",
-      "password": "fsfss",
+      "name": "Rocky",
+      "username": "Rocky Aizawa",
+      "email": "stringthoery@gmail.com",
+      "mobile": "9315238455",
+      "password": "monu12345",
       "order": [],
-      "id": 9
-    },
-    {
-      "name": "Professional",
-      "username": "singer",
-      "email": "Sjsj@ljsljs",
-      "mobile": "42422",
-      "password": "sfs",
-      "order": [],
-      "id": 10
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 11
-    },
-    {
-      "name": "Ravi",
-      "username": "Ravisohan",
-      "email": "Ravi@gmail.com",
-      "mobile": "9329292929292",
-      "password": "hjsjosjos",
-      "order": [],
-      "id": 12
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 13
-    },
-    {
-      "name": "Jvae",
-      "username": "jsjs",
-      "email": "jslj2ojss@Jojs",
-      "mobile": "292299292",
-      "password": "jsojsos",
-      "order": [],
-      "id": 14
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 15
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 16
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 17
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 18
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 19
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 20
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 21
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 22
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 23
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "order": [],
-      "id": 24
+      "id": 6
     }
   ],
   "admin": {
@@ -704,8 +546,131 @@
       "description": "aw mango is a sweet-smelling fruit which is liked by al for its tart flavor. The colour varies in shades of greens and the inner flesh is white in colour. Its potent health benefits makes totapuri mango puree concentrate - an important food item. It is very rich in Vitamin C. They also have trace amounts of Vitamin B, K and E. Product image shown is for representation purpose only, the actually product may vary based on season, produce & availability."
     }
   ],
-  "OrderId": {
-    "id": "count",
-    "count": 101
-  }
+  "orders": [
+    {
+      "id": 28,
+      "name": "Wanna",
+      "username": "while",
+      "email": "W@gmail.com",
+      "mobile": "29292",
+      "password": "123",
+      "cart": [
+        {
+          "id": "sc4",
+          "adminId": "monu",
+          "product_name": "Apple - Shimla",
+          "quantity": "2",
+          "price": 166,
+          "total_price": 332,
+          "status": "In process"
+        },
+        {
+          "id": "sc5",
+          "adminId": "monu",
+          "product_name": "Tender Coconut",
+          "quantity": "1",
+          "price": 150,
+          "total_price": 150,
+          "status": "In process"
+        }
+      ],
+      "order": []
+    },
+    {
+      "id": 29,
+      "name": "",
+      "username": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "cart": [
+        {
+          "id": "sc14",
+          "adminId": "monu",
+          "product_name": "Avocado (Loose)",
+          "quantity": "5",
+          "price": 180,
+          "total_price": 900,
+          "status": "In process"
+        },
+        {
+          "id": "sc7",
+          "adminId": "monu",
+          "product_name": "Blueberry",
+          "quantity": "5",
+          "price": 180,
+          "total_price": 900,
+          "status": "In process"
+        }
+      ],
+      "order": []
+    },
+    {
+      "id": 2,
+      "name": "Ravi",
+      "username": "Ravi Jave",
+      "email": "ravi@gmail.com",
+      "mobile": "29292992",
+      "password": "123",
+      "cart": [
+        {
+          "id": "sc12",
+          "adminId": "monu",
+          "product_name": "Banana - Yelakki, Organically Grown",
+          "quantity": "2",
+          "price": 500,
+          "total_price": 1000,
+          "status": "In process"
+        },
+        {
+          "id": "sc5",
+          "adminId": "monu",
+          "product_name": "Tender Coconut",
+          "quantity": "2",
+          "price": 150,
+          "total_price": 300,
+          "status": "In process"
+        },
+        {
+          "id": "sc13",
+          "adminId": "monu",
+          "product_name": "Watermelon - Small",
+          "quantity": "1",
+          "price": 60,
+          "total_price": 60,
+          "status": "In process"
+        }
+      ],
+      "order": []
+    },
+    {
+      "id": 6,
+      "name": "Rocky",
+      "username": "Rocky Aizawa",
+      "email": "stringthoery@gmail.com",
+      "mobile": "9315238455",
+      "password": "monu12345",
+      "cart": [
+        {
+          "id": "sc7",
+          "adminId": "monu",
+          "product_name": "Blueberry",
+          "quantity": "3",
+          "price": 180,
+          "total_price": 540,
+          "status": "In process"
+        },
+        {
+          "id": "sc1",
+          "adminId": "monu",
+          "product_name": "Banana - Yelakki",
+          "quantity": "2",
+          "price": 48,
+          "total_price": 96,
+          "status": "In process"
+        }
+      ],
+      "order": []
+    }
+  ]
 }

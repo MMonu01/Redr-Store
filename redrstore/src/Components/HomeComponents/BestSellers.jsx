@@ -1,5 +1,4 @@
 import Style from '../../Styles/HomeStyle/BestSellers.module.css'
-import {Link} from 'react-router-dom'
 
 import React from 'react'
 
@@ -18,7 +17,6 @@ fetch('http://localhost:3000/admin')
 .then((res)=>setData(res.products[0].Best_Sellers))
 .catch((err)=>console.log(err))
    }
-//    console.log(data)
     return(
         <div className={Style.Container}>
     <div className={Style.head} >

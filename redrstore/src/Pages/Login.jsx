@@ -70,8 +70,10 @@ else{
 catch(err){
 console.log(err)
 }
+setFormData({
+  name:"",username:"",email:"",mobile:"",password:"",order:[]
+})
       }
-// console.log(authState)
 
 
       const HandleFormData = (e)=>{
@@ -147,8 +149,8 @@ console.log(err)
 
                 </DrawerBody>
       
-                  {/* <Button variant='outline' mr={3} onClick={onClose}> */}
-                  {/* </Button> */}
+      <DrawerFooter> {alertShow==="False"? <Button colorScheme='red' onClick={()=>setAlertShow("")} variant='ghost'>Remove Alert</Button>:null}</DrawerFooter>
+                 
                  
               </DrawerContent>
             </Drawer>

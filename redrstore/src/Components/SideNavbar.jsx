@@ -6,23 +6,15 @@ import {faBars} from '@fortawesome/free-solid-svg-icons'
 import {
     Drawer,
     DrawerBody,
-    DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
     useDisclosure,
-    Button,
-    Input,
-    InputGroup,
-    InputRightElement,
-    Image,
+   
     Box,
     Stack
- ,Alert,
- AlertTitle,
- AlertDescription,
- AlertIcon
+ 
    
     
   } from '@chakra-ui/react'
