@@ -11,5 +11,7 @@
 }
 
 @media screen and (min-width:100px) and (max-width:600px){
-    
+    .TableContainer{width:95%}
+.OrderButton{width:95%}
+.userInfo{width:95%}
 }
