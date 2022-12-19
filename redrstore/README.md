@@ -1,5 +1,5 @@
 # REDR STORE 
-An online grocery store.
+An online grocery store:
 https://redrstore.vercel.app
 
 ## Product Page
