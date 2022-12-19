@@ -15,7 +15,7 @@ const [bag,setBag] = React.useState( {
     "quantity": quantity,
     "price": price,
     "total_price": price*quantity,
-    "status": "In process"
+    "status": "placed"
   })
 
 //   console.log(userCart.cart.length)

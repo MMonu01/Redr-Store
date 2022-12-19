@@ -1,0 +1,15 @@
+.TableContainer {width:80%; margin:auto;}
+.userInfo{width:80%;margin:auto; margin-bottom:10px; margin-top:30px; display: grid; grid-template-columns: repeat(2,auto); gap:2px; justify-content: flex-start;}
+.userInfo >div:nth-child(even){margin-left:20px;}
+.OrderButton{width:80%;margin:auto; text-align: right; margin-top: 30px;}
+
+
+@media screen and (min-width:600px) and (max-width:850px){
+.TableContainer{width:90%}
+.OrderButton{width:90%}
+.userInfo{width:90%}
+}
+
+@media screen and (min-width:100px) and (max-width:600px){
+    
+}
