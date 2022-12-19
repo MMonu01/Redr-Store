@@ -41,7 +41,7 @@ React.useEffect(()=>{
     <div>
         <Link to="/">
 
-        <img src='https://i.ibb.co/FhRDjK7/Redrblack.png' style={{height:"70px",width:"70px"}} alt="logo"/>
+        <img src='https://i.ibb.co/FhRDjK7/Redrblack.png' style={{height:"70px",width:"70px",marginLeft:"20px"}} alt="logo"/>
         </Link>
     </div>
     <div>
