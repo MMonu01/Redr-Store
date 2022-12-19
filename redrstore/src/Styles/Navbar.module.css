@@ -13,6 +13,7 @@
 .basket>div{display:flex; align-items: center;}
 
 .placed{ color:red; font-size: 20px;font-weight: 600;}
+.usernamedet{display: none;}
 
 @media screen and (min-width:700px) and (max-width:850px){
     .Container{
@@ -23,7 +24,7 @@
 
 @media screen and (min-width:500px) and (max-width:700px){
     .Container{grid-template-columns: 23% 50% 30px 30px;}
-    
+    .usernamedet{display: inline;}
     .logsin{display:none;}
     .menu{display:block}
 
@@ -32,7 +33,7 @@
 
 @media screen and (min-width:100px) and (max-width:499px){
     .Container{grid-template-columns:1fr 1fr 1fr}
-
+.usernamedet{display: inline;}
     .SearchContainer{display:none;}
     .logsin{display:none;}
     .menu{display:block}

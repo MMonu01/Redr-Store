@@ -4,7 +4,8 @@ import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import FreshFruits from '../Pages/FreshFruits'
 import SingleFruits from '../Pages/SingleFruits'
-
+import Cart from '../Pages/Cart'
+import PrivateRoute from '../Routes/PrivateRoute'
 
 const AllRoutes = ()=>{
 
@@ -15,6 +16,7 @@ const AllRoutes = ()=>{
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/products/freshfruits" element={<FreshFruits/>}/>
             <Route path="/products/freshfruits/:id" element={<SingleFruits/>}/>
+            <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>}/>
             </Routes>
     )
 }

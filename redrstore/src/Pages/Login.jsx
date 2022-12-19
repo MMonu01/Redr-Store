@@ -51,11 +51,14 @@ try{
   res = await res.json()
   let x = false
 for(let i=0; i<res.length; i++){
-  if(res[i].email===formData.email && res[i].password===formData.password){
+  if((res[i].email===formData.email && res[i].password===formData.password)){
    x = true
  loginUser(res[i])
   }
 }
+
+
+
 if(x===false){
   console.log("Alert is not working")
 setAlertShow("False")

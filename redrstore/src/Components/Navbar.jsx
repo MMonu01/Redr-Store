@@ -16,24 +16,8 @@ const Navbar = ()=>{
 const {theme,toggleTheme} = React.useContext(ThemeContext)
 const {authState,loginUser,logoutUser,userCart,text,setText} = React.useContext(AuthContext)
 const [itemCount ,setItemCount]  = React.useState(0)
-const [order,setOrder] = React.useState(false)
 
-const PutData = (data)=>{
-    return axios({
-        method:"post",
-        baseURL:`https://server-unwieldy-record-8334.onrender.com/orders`,
-        data:data,
-headers:{
-"Content-Type":"application/json"
-}
-        
-    })
-}
 
-const HandleOrder = ()=>{
-    setOrder(true)
-    PutData(userCart)
-}
 
 const HandleText = (e)=>{
     setText(e.target.value)
@@ -47,6 +31,8 @@ React.useEffect(()=>{
             count += Number(userCart.cart[i].quantity)
         }
         setItemCount(count)
+    }else{
+        setItemCount(0)
     }
 },[userCart.cart])
 
@@ -69,16 +55,17 @@ React.useEffect(()=>{
   </div>
   </div>
     </div>
- 
-        <div className={Styles.basket}> {order===true?(<FontAwesomeIcon className={Styles.placed} icon={faCheck}></FontAwesomeIcon>):(<div><FontAwesomeIcon onClick={HandleOrder} icon={faBasketShopping}  style={{fontSize:"20px",cursor:"pointer"}}></FontAwesomeIcon><sup>{itemCount}</sup>
-        </div>)} </div>
+ <Link to="/cart">
+        <div className={Styles.basket}><div><FontAwesomeIcon  icon={faBasketShopping}  style={{fontSize:"20px",cursor:"pointer"}}></FontAwesomeIcon><sup>{itemCount}</sup>
+        </div></div>
+        </Link>
     <div className={Styles.logsin}>
  <div> <FontAwesomeIcon icon={faCircleUser}></FontAwesomeIcon></div>
 
         <div>{authState.isAuth===true?(authState.token.name):(<Signup/>)}</div>
         <div>{authState.isAuth===true?(<Button onClick={logoutUser}>Logout</Button>):(<Login/>)}</div>
     </div>
-    {/* </div> */}
+ 
 
 
 </div>

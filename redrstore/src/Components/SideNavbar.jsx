@@ -11,24 +11,24 @@ import {
     DrawerContent,
     DrawerCloseButton,
     useDisclosure,
-   
+   Button,
     Box,
     Stack
  
    
-    
   } from '@chakra-ui/react'
   import { AuthContext } from '../Contexts/AuthContext'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import Styles from '../Styles/Navbar.module.css'
 
+
 const SideNavbar = ()=>{
 
         const { isOpen, onOpen, onClose } = useDisclosure()
         const btnRef = React.useRef()
         const [show, setShow] = React.useState(false)
-
+const {authState,logoutUser} = React.useContext(AuthContext)
 
         const handleClick = () => setShow(!show)
 
@@ -63,8 +63,9 @@ const SideNavbar = ()=>{
                 <DrawerBody>
                     <Stack spacing={3}>
 
-<Login/>
-<Signup/>
+                   {authState.isAuth===true?(<Box style={{textAlign:"center",background:"#40a944",color:"white",padding:"8px 0",borderRadius:"5px"}}>{authState.token.name}</Box>):(<Signup/>)}
+                   sljssjs
+       {authState.isAuth===true?(<Button onClick={logoutUser}>Logout</Button>):(<Login/>)}
 
 
 

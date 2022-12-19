@@ -4,6 +4,18 @@ import { useSearchParams } from 'react-router-dom'
 export const AuthContext = React.createContext()
 
 
+let initialCart = {
+  id:"",
+  name:"",
+  username:"",
+  email:"",
+  mobile:"",
+  password:"",
+  cart:[]
+
+}
+
+
 function  AuthContextProvider({children}){ 
   
   const [authState,setAuthState] = React.useState({
@@ -19,16 +31,7 @@ function  AuthContextProvider({children}){
 
 
 
-  const [userCart,setUserCart] = React.useState({
-    id:"",
-    name:"",
-    username:"",
-    email:"",
-    mobile:"",
-    password:"",
-    cart:[]
-
-  })
+  const [userCart,setUserCart] = React.useState(initialCart)
 
 
     console.log(userCart)
@@ -41,7 +44,7 @@ setUserCart({...userCart,...token})
 
 const logoutUser = ()=>{
 setAuthState({isAuth:false,token:null})
-setUserCart({})
+setUserCart(initialCart)
 }
 
 
